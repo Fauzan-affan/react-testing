@@ -1,6 +1,5 @@
 import React from 'react'
 import {render, cleanup} from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
 import renderer from "react-test-renderer"
 
 import Button from "./Button.js";
@@ -23,6 +22,5 @@ test("set props", () => {
 
 describe("check snapshot", () => {
     const tree = renderer.create(<Button label="Save Me"/>).toJSON()
-
     expect(tree).toMatchSnapshot()
 })
